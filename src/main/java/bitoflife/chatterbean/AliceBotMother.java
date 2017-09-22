@@ -1,5 +1,5 @@
 /*
-Copyleft (C) 2005 Hélio Perroni Filho
+Copyleft (C) 2005 Hï¿½lio Perroni Filho
 xperroni@yahoo.com
 ICQ: 2490863
 
@@ -15,8 +15,12 @@ You should have received a copy of the GNU General Public License along with Cha
 package bitoflife.chatterbean;
 
 import java.io.FileInputStream;
+import java.io.InputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.PrintStream;
+import java.net.URL;
+
 import bitoflife.chatterbean.parser.AliceBotParser;
 import bitoflife.chatterbean.util.Searcher;
 
@@ -50,10 +54,23 @@ public class AliceBotMother
   {
     Searcher searcher = new Searcher();
     AliceBotParser parser = new AliceBotParser();
-    AliceBot bot = parser.parse(new FileInputStream("Bots/context.xml"),
-                                new FileInputStream("Bots/splitters.xml"),
-                                new FileInputStream("Bots/substitutions.xml"),
-                                searcher.search("Bots/Alice", ".*\\.aiml"));
+/*    InputStream is = this.getClass().getClassLoader().getResourceAsStream("Bots/context.xml");
+    System.out.println(is.read());
+*/
+/*    File folder = new File(url.toURI());
+    File[] listOfFiles = folder.listFiles();
+
+        for (int i = 0; i < listOfFiles.length; i++) {
+          if (listOfFiles[i].isFile()) {
+            System.out.println("File " + listOfFiles[i].getName());
+          } else if (listOfFiles[i].isDirectory()) {
+            System.out.println("Directory " + listOfFiles[i].getName());
+          }
+        }*/
+    AliceBot bot = parser.parse(new FileInputStream("classes/Bots/context.xml"),
+                                new FileInputStream("classes/Bots/splitters.xml"),
+                                new FileInputStream("classes/Bots/substitutions.xml"),
+                                searcher.search("classes/Bots/Alice", ".*\\.aiml"));
 
     Context context = bot.getContext(); 
     context.outputStream(gossip);

@@ -10,7 +10,7 @@ ChatterBean is free software; you can redistribute it and/or modify it under the
 ChatterBean is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with ChatterBean (look at the Documents/ directory); if not, either write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA, or visit (http://www.gnu.org/licenses/gpl.txt).
-*/
+
 
 package bitoflife.chatterbean;
 
@@ -20,22 +20,22 @@ import junit.swingui.TestRunner;
 
 public class TestSuite extends junit.framework.TestSuite
 {
-  /*
-  Attributes
-  */
   
-  /** Names of the test classes to include in the test. */
+  Attributes
+  
+  
+  *//** Names of the test classes to include in the test. *//*
   private static String[] testNames;
 
-  /*
-  Methods
-  */
   
-  /**
+  Methods
+  
+  
+  *//**
   Adds all the known unit tests to the suite.
   
   @param suite The test suite to which the known unit tests must be added. 
-  */
+  *//*
   private static void addAllTests(TestSuite suite)
   {
     suite.addTestSuite(bitoflife.chatterbean.AliceBotTest.class);
@@ -57,28 +57,28 @@ public class TestSuite extends junit.framework.TestSuite
     suite.addTestSuite(bitoflife.chatterbean.util.SequenceTest.class);
   }
 
-  /**
+  *//**
   Main entry point.
   
   @param args The names of test classes that must be included in the test. If ommited, all known tests will be included. 
-  */
+  *//*
   public static void main(String args[])
   {
     testNames = args;
     TestRunner.main(new String[] {"-noloading", "bitoflife.chatterbean.TestSuite"});
   }
 
-  /**
+  *//**	
   Returns a new test suite.
   
   @return A new test suite.
-  */
+  *//*
   public static Test suite()
   {
     TestSuite suite = new TestSuite();
     
-    if (testNames == null || testNames.length == 0) /* If no argument was given during the command-line call... */
-      addAllTests(suite); /* Add all known tests to the suite. */
+    if (testNames == null || testNames.length == 0)  If no argument was given during the command-line call... 
+      addAllTests(suite);  Add all known tests to the suite. 
     else try // Otherwise...
     {
       // Add only the given tests to the suite.
@@ -93,3 +93,4 @@ public class TestSuite extends junit.framework.TestSuite
     return suite;
   }
 }
+*/

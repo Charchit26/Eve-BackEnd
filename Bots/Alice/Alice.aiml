@@ -7,15 +7,15 @@
   </category> 
   <category>
     <pattern>RFID *</pattern>
-    <template>Thanks, now please enter your Email Id...<star/></template>
+    <template>Thanks, now please enter your Email Id...</template>
   </category>
   <category>
-    <pattern>*@*</pattern>
+    <pattern>charchit@google.com</pattern>
     <template>Is <that/> your email Id?? Please confirm by pressing 'Y'.</template>
   </category>  
   <category>
-    <pattern>Y*</pattern>
-    <template>Is <that/> your email Id?? Please confirm by pressing 'Y'.</template>
+    <pattern>Y *</pattern>
+    <template>You are now registered, Have a G'day!</template>
   </category>
   <category>
     <pattern>alert</pattern>

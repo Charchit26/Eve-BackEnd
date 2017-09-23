@@ -99,10 +99,10 @@ public class Searcher implements FilenameFilter
 	  } catch (IOException e) {
 	      e.printStackTrace();
 	  }*/
-	  System.out.println("inside search method");
+	  //System.out.println("inside search method");
 
     String[] names = dir(path, expression);
-    System.out.println(names);
+   // System.out.println(names);
     InputStream[] files = new InputStream[names.length];
     for (int i = 0, n = names.length; i < n; i++)
       files[i] = new FileInputStream(names[i]);

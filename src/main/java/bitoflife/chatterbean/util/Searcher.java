@@ -1,5 +1,5 @@
 /*
-Copyleft (C) 2005 Hélio Perroni Filho
+Copyleft (C) 2005 Hï¿½lio Perroni Filho
 xperroni@yahoo.com
 ICQ: 2490863
 
@@ -22,10 +22,16 @@ import java.io.InputStreamReader;
 import java.io.IOException;                           
 import java.io.InputStream;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 
 public class Searcher implements FilenameFilter
 {
@@ -42,7 +48,7 @@ public class Searcher implements FilenameFilter
   */
   
   protected String[] dir(String path, String expression)
-  {
+  {	  
     this.expression = expression;
 
     if (path.charAt(path.length() - 1) != '/') path += "/";
@@ -81,7 +87,22 @@ public class Searcher implements FilenameFilter
 
   public InputStream[] search(String path, String expression) throws IOException
   {
+/*	  Resource resource4 = new ClassPathResource(path);
+	  InputStream inputStream4 = resource4.getInputStream();
+	  Path alice = Files.createTempDirectory("alice");
+	  Files.copy(inputStream4, alice, StandardCopyOption.REPLACE_EXISTING);
+	  
+	  File source = new File("H:\\work-temp\\file");
+	  File dest = new File("H:\\work-temp\\file2");
+	  try {
+	      FileUtils.copyDirectory(source, dest);
+	  } catch (IOException e) {
+	      e.printStackTrace();
+	  }*/
+	  System.out.println("inside search method");
+
     String[] names = dir(path, expression);
+    System.out.println(names);
     InputStream[] files = new InputStream[names.length];
     for (int i = 0, n = names.length; i < n; i++)
       files[i] = new FileInputStream(names[i]);

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<aiml>
+  <category>
+    <pattern>HI</pattern>
+    <template>VOLA! I am Eve. Please pick a RFID band & register yourself by touching it to the reader...</template>
+  </category> 
+  <category>
+    <pattern>_20*</pattern>
+    <template>Thanks, now please enter your Email Id...</template>
+  </category>
+<category>
+    <pattern>_@</pattern>
+    <template>Welcome to Telstra Unconference, Pune. You are successfully registered. Please proceed to the breakfast area.</template>
+  </category>  
+</aiml>

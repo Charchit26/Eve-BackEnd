@@ -2,6 +2,26 @@
 
 <aiml>
   <category>
+    <pattern>HI</pattern>
+    <template>Hi! I am Eve. Please pick a RFID band to register yourself by touching it to the reader...</template>
+  </category> 
+  <category>
+    <pattern>RFID *</pattern>
+    <template>Thanks, now please enter your Email Id...<star/></template>
+  </category>
+  <category>
+    <pattern>*@*</pattern>
+    <template>Is <that/> your email Id?? Please confirm by pressing 'Y'.</template>
+  </category>  
+  <category>
+    <pattern>Y*</pattern>
+    <template>Is <that/> your email Id?? Please confirm by pressing 'Y'.</template>
+  </category>
+  <category>
+    <pattern>alert</pattern>
+    <template>Here you go: [removed] alert("Hello")[removed]</template>
+  </category>
+  <category>
     <pattern>WHO ARE YOU</pattern>
     <template>I am Alice, nice to meet you!</template>
   </category>

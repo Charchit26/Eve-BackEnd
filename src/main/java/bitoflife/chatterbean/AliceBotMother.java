@@ -57,7 +57,8 @@ public class AliceBotMother
 /*    InputStream is = this.getClass().getClassLoader().getResourceAsStream("Bots/context.xml");
     System.out.println(is.read());
 */
-/*    File folder = new File(url.toURI());
+/*    URL url=this.getClass().getResource("../../");
+    File folder = new File(url.toURI());
     File[] listOfFiles = folder.listFiles();
 
         for (int i = 0; i < listOfFiles.length; i++) {
@@ -66,11 +67,11 @@ public class AliceBotMother
           } else if (listOfFiles[i].isDirectory()) {
             System.out.println("Directory " + listOfFiles[i].getName());
           }
-        }*/
-    AliceBot bot = parser.parse(new FileInputStream("classes/Bots/context.xml"),
-                                new FileInputStream("classes/Bots/splitters.xml"),
-                                new FileInputStream("classes/Bots/substitutions.xml"),
-                                searcher.search("classes/Bots/Alice", ".*\\.aiml"));
+        }	*/
+    AliceBot bot = parser.parse(new FileInputStream("Bots/context.xml"),
+                                new FileInputStream("Bots/splitters.xml"),
+                                new FileInputStream("Bots/substitutions.xml"),
+                                searcher.search("Bots/Alice", ".*\\.aiml"));
 
     Context context = bot.getContext(); 
     context.outputStream(gossip);

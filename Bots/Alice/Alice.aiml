@@ -27,11 +27,11 @@
     <template>Thanks, now please enter your Email Id...</template>
   </category>
     <category>
-    <pattern>REGISTERED *</pattern>
+    <pattern>REGISTERED</pattern>
     <template>You are already a registered user, Enjoy your day...</template>
   </category> 
       <category>
-    <pattern>UNREGISTERED *</pattern>
+    <pattern>UNREGISTERED</pattern>
     <template>Ohh, It seems you are not registered yet...Please enter your name</template>
   </category> 
 	<category>

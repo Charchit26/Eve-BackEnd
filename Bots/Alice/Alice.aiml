@@ -1,26 +1,48 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <aiml>
+<category>
+      <pattern>WHAT ABOUT MOVIES</pattern>
+      <template>Do you like comedy movies</template>  
+   </category>
+   
+   <category>
+      <pattern>YES</pattern>
+      <that>Do you like comedy movies</that>
+      <template>Nice, I like comedy movies too.</template>
+   </category>
+   
+   <category>
+      <pattern>NO</pattern>
+      <that>Do you like comedy movies</that>
+      <template>Ok! But I like comedy movies.</template>
+   </category> 
+   
   <category>
     <pattern>HI</pattern>
-    <template>Hi! I am Eve. Please pick a RFID band to register yourself by touching it to the reader...</template>
+    <template>Hi! Welcome to the Pune Unconference. Please pick up your RFID and scan it...</template>
   </category> 
   <category>
     <pattern>RFID *</pattern>
     <template>Thanks, now please enter your Email Id...</template>
   </category>
-  <category>
-    <pattern>charchit@google.com</pattern>
-    <template>Is <that/> your email Id?? Please confirm by pressing 'Y'.</template>
-  </category>  
-  <category>
-    <pattern>Y *</pattern>
-    <template>You are now registered, Have a G'day!</template>
-  </category>
-  <category>
-    <pattern>alert</pattern>
-    <template>Here you go: [removed] alert("Hello")[removed]</template>
-  </category>
+    <category>
+    <pattern>REGISTERED *</pattern>
+    <template>You are already a registered user, Enjoy your day...</template>
+  </category> 
+      <category>
+    <pattern>UNREGISTERED *</pattern>
+    <template>Ohh, It seems you are not registered yet...Please enter your name</template>
+  </category> 
+	<category>
+  <pattern>NAME *</pattern>
+    <template>Hi <star />!, Please enter your employer's name.</template>
+  </category> 
+  	<category>
+  <pattern>EMPLOYER *</pattern>
+    <template>You are now registered, please proceed for the voting and have a G'day!</template>
+  </category> 
+
   <category>
     <pattern>WHO ARE YOU</pattern>
     <template>I am Alice, nice to meet you!</template>
@@ -59,14 +81,19 @@
   </category>
   <category>
     <pattern>HI YA</pattern>
-    <template><srai>HELLO</srai></template>
+    <template><srai>HI</srai></template>
   </category>
   <category>
     <pattern>HELLO</pattern>
-    <template>
-      Hello <get name="name"/>!
-      My name is Alice, who are you?
-    </template>
+    <template><srai>HI</srai></template>
+  </category>
+    <category>
+    <pattern>HEY</pattern>
+    <template><srai>HI</srai></template>
+  </category>
+    <category>
+    <pattern>HI!</pattern>
+    <template><srai>HI</srai></template>
   </category>
   <category>
     <pattern>GREETINGS FROM *</pattern>
